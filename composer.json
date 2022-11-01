@@ -1,0 +1,22 @@
+{
+  "name": "multiway/sentryweb",
+  "description": "Sistema Sentry Web",
+  "type": "project",
+  "homepage": "http://sentry.com.br",
+  "autoload": {
+    "psr-4": {
+      "App\\": "./application"
+    }
+  },
+  "authors": [
+    {
+      "name": "Felipe",
+      "email": "felipe@multiway.com.br"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "php-amqplib/php-amqplib": "^2.7",
+    "phpmailer/phpmailer": "^6.0"
+  }
+}
