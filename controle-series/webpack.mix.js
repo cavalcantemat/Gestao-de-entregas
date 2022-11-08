@@ -11,5 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix.options({
+    terser: {
+        extractComments: false,
+    }
+});
+
+mix.js('resources/js/react/delivery', 'public/js/delivery/resource.js').react().sourceMaps();

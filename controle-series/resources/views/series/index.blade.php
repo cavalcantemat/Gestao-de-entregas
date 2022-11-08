@@ -1,22 +1,32 @@
-<x-layout title="Cadastro de Entregas">
-            <form action="/registry/save" method="post">
-                @csrf
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nome do cliente</label>
-                    <input type="text" id="clientName" name="clientName" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="dtReceive" class="form-label">Data de entrega</label>
-                    <input type="text" id="dtReceive" name="dtReceive" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="startPoint" class="form-label">Ponto de partida</label>
-                    <input type="text" id="startPoint" name="startPoint" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="endPoint" class="form-label">Ponto de Destino</label>
-                    <input type="text" id="endPoint" name="endPoint" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-primary">Adicionar</button>
-            </form>
+<x-layout title="Lista de Entregas">
+    <body>
+    <div id="app"></div>
+
+    <script src="{{asset('/js/delivery/resource.js')}}"></script>
+    </body>
+
+    {{--        <table class="table">--}}
+    {{--            <thead>--}}
+    {{--            <tr>--}}
+    {{--                <th scope="col">#</th>--}}
+    {{--                <th scope="col">Nome do cliente</th>--}}
+    {{--                <th scope="col">Data de entrega</th>--}}
+    {{--                <th scope="col">Ponto de partida</th>--}}
+    {{--                <th scope="col">Ponto de destino</th>--}}
+    {{--            </tr>--}}
+    {{--            </thead>--}}
+    {{--            <tbody>--}}
+    {{--            @foreach($series as $serie)--}}
+    {{--                <tr>--}}
+    {{--                    <th scope="row">{{$serie->id}}</th>--}}
+    {{--                    <td>{{$serie->clientName}}</td>--}}
+    {{--                    <td>{{$serie->dtReceive}}</td>--}}
+    {{--                    <td>{{$serie->startPoint}}</td>--}}
+    {{--                    <td>{{$serie->endPoint}}</td>--}}
+    {{--                </tr>--}}
+    {{--            @endforeach--}}
+    {{--            </tbody>--}}
+    {{--        </table>--}}
+
+    <a href="/registry/create" class="btn btn-dark">Adicionar</a>
 </x-layout>
