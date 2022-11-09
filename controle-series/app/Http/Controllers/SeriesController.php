@@ -24,6 +24,7 @@ class SeriesController extends Controller
 
     public function save(Request $request)
     {
+
         $clientName = $request->input('clientName');
         $dtReceive = $request->input('dtReceive');
         $startPoint = $request->input('startPoint');
@@ -36,7 +37,8 @@ class SeriesController extends Controller
         $delivery->endPoint = $endPoint;
 
         $delivery->save();
+        return json_encode('oi');
 
-        return redirect('/registry');
+//        return redirect('/registry');
     }
 }

@@ -22,4 +22,5 @@ Route::get('/registry', [\App\Http\Controllers\SeriesController::class, 'create'
 
 Route::get('/registry/create', [\App\Http\Controllers\SeriesController::class, 'index']);
 
-Route::post('/registry/save', [\App\Http\Controllers\SeriesController::class, 'save']);
+Route::get('registry/save', [\App\Http\Controllers\SeriesController::class, 'save']);
+

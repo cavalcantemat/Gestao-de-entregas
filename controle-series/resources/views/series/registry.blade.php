@@ -1,6 +1,6 @@
 <x-layout title="Lista de Entregas">
     <body>
-    <script src="{{asset('/js/delivery/resource.js')}}"></script>
+{{--    <script src="{{asset('/js/delivery/resource.js')}}"></script>--}}
     <div id="app"></div>
     </body>
 
